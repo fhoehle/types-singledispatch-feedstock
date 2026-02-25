@@ -13,13 +13,13 @@ source:
   sha256: b191c98c2d8809d53987faaae48c7382e2a1f4cd89a64de2ef61ce2011e49b7c
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
-    - python >=${{ python_min }}
+    - python ${{ python_min }}.*
     - setuptools
     - pip
   run:
