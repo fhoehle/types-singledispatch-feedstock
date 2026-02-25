@@ -26,7 +26,12 @@ requirements:
     - python >=${{ python_min }}
 
 tests:
-  - script:
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
 
   - package_contents:
       site_packages:
